@@ -1,0 +1,8 @@
+{
+  "id": "A049",
+  "prompt": "Use case: precise-object-edit. Input image is the edit target. Preserve its cinematic dimensional 3D Chinese mythological animation style, mountains, golden light, sky, tall grasses and original scene mood. Change the lower foreground clearing into a broad continuous emerald reflective WATER PUPPET PERFORMANCE POOL occupying the lower 40% of image, from left edge to right edge. The grassland remains beyond the far bank, not replaced. Water must show clearly readable reflections of the mountains, warm sky and grasses, gentle overlapping circular ripples and low small wavelets. Central pool unobstructed for future puppet animation. Natural integration with rocks/reeds only at edges. Vietnamese water puppet staging fused with Chinese Shanhai Jing landscape. This is scenic stage adaptation, not a literal flood disaster. No characters, text, modern props, no dry foreground, not flat illustration.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-aec87927-2285-4385-888f-17b49efae4b3.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/04_羿战凿齿/01_背景/第二幕_狂风对峙场/02_图片/第二幕_狂风对峙场_水戏前景_v002.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

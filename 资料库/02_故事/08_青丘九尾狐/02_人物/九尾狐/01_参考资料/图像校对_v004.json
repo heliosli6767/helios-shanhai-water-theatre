@@ -1,0 +1,8 @@
+{
+  "tool": "imagegen",
+  "version": "v004",
+  "reference": "../02_图片/九尾狐_校对_v003.png",
+  "output": "../02_图片/九尾狐_纯白透明_v004.png",
+  "purpose": "将九尾狐全身毛色改为纯白，保留原始姿态和九条尾巴，透明 PNG 用于目录封面、阅读与水上戏台。原图保留。",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied existing Chinese mythological nine-tailed fox game character. Create a replacement character sprite, preserving this exact fox's face, amber eyes, red forehead marking, body proportions, four legs, stance and exactly nine separate fluffy tails arranged in the same fan. Change the coat to clean luminous SNOW WHITE everywhere: white torso, white belly, white limbs and paws, white ears externally, white tails all the way to their tips. Remove lavender, gray, brown and yellow coloration from the fur. Use soft neutral high-key studio lighting with very subtle pale neutral shadows so it still reads as a dimensional 3D animated-film character, but never a gray torso or gray fur patches. Keep fine individual silky white fur details, the same full-body 3/4 pose and 3D fantasy rendering style. Isolate on a genuinely transparent alpha background, no floor, no scenery, no lettering, no checkerboard baked into the image, no additional objects or animals. Full body and all nine tails in frame with margin. Deliver one transparent PNG sprite."
+}

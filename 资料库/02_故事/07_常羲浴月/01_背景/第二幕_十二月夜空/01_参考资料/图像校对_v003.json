@@ -1,0 +1,8 @@
+{
+  "id": "A090",
+  "prompt": "Use case: precise-object-edit. Keep this image entirely unchanged except ADD ONE SMALL FULL MOON at approximately x=305, y=225 on this 1672x941 canvas, on the left end of the existing arc, between the left tree canopy and the current leftmost moon. Match the pearly warm lunar material and glow, diameter about 45 pixels, clearly separated from the current leftmost moon. The image currently contains ELEVEN moons; adding ONLY THIS ONE makes TWELVE. Do not remove, repaint, move or resize any of the eleven existing moons. Preserve the entire landscape, water pool, reflections and sky. No other additions, no labels, no text.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-051b35ba-1d79-4b77-a9ff-6f04c0289cb0.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/07_常羲浴月/01_背景/第二幕_十二月夜空/02_图片/第二幕_十二月夜空_校对_v003.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

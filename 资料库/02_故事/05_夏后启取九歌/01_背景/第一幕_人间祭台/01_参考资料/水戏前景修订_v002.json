@@ -1,0 +1,8 @@
+{
+  "id": "A062",
+  "prompt": "Use case: precise-object-edit. Input is edit target. Preserve mountains, twilight, lanterns, banners, instruments and dimensional cinematic Chinese fantasy animation style. This is the human ritual altar scene of Qi obtaining heavenly music adapted to Vietnamese water puppetry. Move the circular carved stone altar from the foreground to the midground far bank, keeping it visibly recognizable but smaller. Replace the ENTIRE lower 40% foreground with a continuous clear jade-blue WATER PERFORMANCE POOL reflecting warm lanterns, sky and mountains, gentle concentric ripples, center unobstructed. Keep the two sides as narrow raised stone banks with lamps, no stone platform blocking the middle foreground. No characters, no lettering, no modern objects. Wide 16:9.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-7d4cc94b-4f2c-4a77-88c9-3a184e27e1c6.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/05_夏后启取九歌/01_背景/第一幕_人间祭台/02_图片/第一幕_人间祭台_水戏前景_v002.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

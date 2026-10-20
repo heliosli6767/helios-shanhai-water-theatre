@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><base href="../"><title>MediaPipe 本地模型验证</title></head><body><h1>MediaPipe 本地模型验证</h1><pre id="result">正在运行…</pre><video id="test-video" muted playsinline hidden></video><script src="hand-input.js"></script><script>
+(async()=>{
+  const output=document.getElementById('result');const lines=[];
+  const check=(condition,message)=>{if(!condition)throw new Error(message);lines.push('PASS '+message);output.textContent=lines.join('\n');};
+  try{
+    const p=Array.from({length:21},()=>({x:.5,y:.5,z:0}));p[0]={x:.5,y:.8};p[9]={x:.5,y:.5};p[5]={x:.4,y:.6};p[17]={x:.6,y:.6};p[4]={x:.4,y:.3};p[8]={x:.7,y:.3};
+    const a=HandInput.classify(p,{},100);p[8]={x:.42,y:.3};const b=HandInput.classify(p,a,200);
+    check(b.kind==='pinch','捏合阈值与边沿识别');p[8]={x:.7,y:.3};const c=HandInput.classify(p,b,300);check(c.kind==='release','松指事件');
+    check(HandInput.classify(p,c,1200).kind===null,'手离开后恢复不会误触发');
+    check(HandInput.anatomicalSide('Right')==='left'&&HandInput.anatomicalSide('Left')==='right','镜像输入的左右标签统一校正');
+    const gate=HandInput.createCueGate('open',{readyAt:1800});let feedback;
+    let protectedReading=true;for(let t=0;t<1800;t+=100)protectedReading=protectedReading&&!gate.update({palm:{x:.5,y:.5},open:true,pinch:false},t).accepted;
+    check(protectedReading,'阅读保护期不会误触发');
+    for(let t=1800;t<=2500;t+=100)feedback=gate.update({palm:{x:.5,y:.5},open:true,pinch:false},t);
+    check(feedback.accepted,'持续张掌可触发，不要求重新握拳');
+    const controller=HandInput.create({video:document.getElementById('test-video'),onFrame(){},onGesture(){},onStatus(){},onError(){}});
+    check(!controller.active,'模型加载不会启动摄像头');
+    const model=await controller.load();const blank=document.createElement('canvas');blank.width=320;blank.height=240;
+    const result=model.detectForVideo(blank,performance.now());check(result.landmarks.length===0,'本地 WASM 与 hand_landmarker.task 成功推理空白帧');
+    check(!controller.active,'推理检查后摄像头仍未启动');controller.stop();model.close();lines.push('ALL PASS');output.textContent=lines.join('\n');
+  }catch(e){output.textContent=lines.join('\n')+'\nFAIL '+e.stack;}
+})();
+</script></body></html>

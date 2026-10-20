@@ -1,0 +1,34 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><base href="../"><title>道具动作定位检查</title>
+<link rel="stylesheet" href="experience.css"><link rel="stylesheet" href="mythic.css?v=18">
+<style>body{padding:20px;background:#133044}header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}button,select{padding:10px;background:#35586a;color:white;border:1px solid #bde3d3}#rig-test-stage{height:600px;width:min(1100px,100%);margin:auto}.scene-actor{animation:none!important}output{display:block;white-space:pre-wrap;margin:15px;line-height:1.7;font:14px system-ui}h1{font-size:20px;margin:0}</style></head><body>
+<header><h1>道具动作定位检查</h1><select id="case"><option value="1,2">精卫衔石</option><option value="8,0">乐师奏琴</option><option value="7,1">搭箭射箭</option><option value="10,0">捧月浴月</option><option value="9,0">羲和捧日</option><option value="16,1">握住护符</option></select><button id="reset">复位</button><button id="next">演出下一动作</button><button id="verify">自动检查</button></header>
+<div id="rig-test-stage" class="scene-stage"></div><output id="report"></output>
+<script src="scene-data.js?v=18"></script><script src="asset-map.js"></script><script src="prop-rig.js?v=18"></script><script src="stage-renderer.js?v=18"></script>
+<script>
+const host=document.getElementById('rig-test-stage'),report=document.getElementById('report'),selector=document.getElementById('case');let state={},id=1,act=2,step=0;
+const asset=id=>host.querySelector('[data-asset-id="'+id+'"].scene-actor');
+async function render(){StageArt.render(host,STORY_SCENES[id][act],{index:act,chrome:false,propState:state});await host._rigReady;}
+async function reset(){[id,act]=selector.value.split(',').map(Number);state={};step=0;await render();report.textContent='待演出：'+STORY_SCENES[id][act].steps[step].label;}
+async function next(){const steps=STORY_SCENES[id][act].steps;if(step>=steps.length)return;await StageArt.animate(host,steps[step]);report.textContent='已完成：'+steps[step].label;step++;}
+document.getElementById('reset').onclick=reset;selector.onchange=reset;
+document.getElementById('next').onclick=async()=>{const button=document.getElementById('next');button.disabled=true;try{if(step>0)await render();await next();}finally{button.disabled=false;}};
+document.getElementById('verify').onclick=async()=>{
+ const button=document.getElementById('verify');button.disabled=true;document.getElementById('next').disabled=true;const results=[];const check=(ok,message)=>{if(!ok)throw Error(message);results.push('PASS '+message);report.textContent=results.join('\n');};
+ try{
+  id=1;act=2;state={};await render();await StageArt.animate(host,STORY_SCENES[1][2].steps[0]);
+  check(asset('A013').dataset.attachedTo==='A011','精卫衔起单颗石子，石子属于鸟嘴定位');
+  const bird=asset('A011'),stone=asset('A013'),box=PuppetRig.fit(bird.clientWidth,bird.clientHeight,bird.querySelector('canvas').width,bird.querySelector('canvas').height),p=PuppetRig.point(box,PuppetRig.pickups.A011);
+  check(Math.abs(parseFloat(stone.style.left)-p.x)<.1&&Math.abs(parseFloat(stone.style.top)-p.y)<.1,'石子中心与嘴部锚点对齐');
+  await render();check(asset('A013').dataset.attachedTo==='A011','下一动作重绘后仍衔住石子');await StageArt.animate(host,STORY_SCENES[1][2].steps[1]);
+  check(asset('A011').querySelector('.mounted-prop')===asset('A013'),'飞行时石子跟随精卫共同变换');await render();
+  check(asset('A011').querySelector('.puppet-body').style.transform.includes('-90px'),'飞行终点跨动作保留');
+  await StageArt.animate(host,STORY_SCENES[1][2].steps[2]);check(!asset('A013').dataset.attachedTo&&asset('A013').hidden,'投石从嘴边脱离并落水');check(host.querySelector('.action-ring'),'落点产生涟漪');
+  id=8;act=0;state={};await render();check(asset('A074').dataset.attachedTo==='A068','古琴绑定乐师而不是裙摆水面');check(PuppetRig.equipment.A074.y<.35,'古琴在胸前手部高度');
+  const old=asset('A074').getBoundingClientRect().x;asset('A068').style.left='75%';check(Math.abs(asset('A074').getBoundingClientRect().x-old)>20,'乐师走位时乐器同步跟随');
+  await StageArt.animate(host,STORY_SCENES[8][0].steps[0]);check(asset('A074').dataset.attachedTo==='A068','奏乐后持琴关系不丢失');
+  id=7;act=1;state={};await render();check(asset('A055').dataset.attachedTo==='A051'&&asset('A054').dataset.attachedTo==='A051','弓与箭均定位到羿的手部');check(asset('A057').dataset.attachedTo==='A052','盾跟随凿齿');
+  await StageArt.animate(host,STORY_SCENES[7][1].steps[1]);check(asset('A055').hidden,'箭从弓前射出后退场');
+  results.push('ALL PASS（未启动摄像头）');report.textContent=results.join('\n');
+ }catch(error){report.textContent=results.join('\n')+'\nFAIL '+error.stack;}finally{button.disabled=false;document.getElementById('next').disabled=false;}
+};reset();
+</script></body></html>

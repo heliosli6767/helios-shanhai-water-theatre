@@ -1,0 +1,47 @@
+page {
+  min-height: 100%;
+  background: #102d3c;
+  color: #fff6df;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+.rotate-gate {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22rpx;
+  background: radial-gradient(circle at 50% 42%, #20495a, #061b27 72%);
+  color: #fff8e7;
+  text-align: center;
+}
+
+.rotate-device {
+  width: 128rpx;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid rgba(255,255,255,.5);
+  border-radius: 32rpx;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 22rpx 60rpx rgba(0,0,0,.35);
+  font-size: 72rpx;
+}
+
+.rotate-title {
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 44rpx;
+  letter-spacing: .12em;
+}
+
+.rotate-copy {
+  color: rgba(238,248,241,.78);
+  font-size: 24rpx;
+}

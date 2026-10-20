@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+apps/wechat-miniprogram/project.private.config.json
+apps/wechat-miniprogram-diagnostic/project.private.config.json
+*.log

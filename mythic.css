@@ -1,0 +1,104 @@
+/* Clear optical controls, a spatial island atlas, and a full-viewport water stage. */
+:root{--glass:linear-gradient(150deg,#ffffff26,#e1f5ff08 45%,#ffffff15);--glass-edge:#fff6;--glass-shadow:inset 0 1px 1px #fff8,inset 0 -1px 1px #fff2,0 8px 30px #061b3128}
+html,body,.app-shell,main,.screen{border:0;outline:0}
+h1[tabindex="-1"]:focus{outline:none}
+button:not(.story-card),summary{border-radius:30px}
+.primary-button,.secondary-button,.site-header button,.text-back,.quiet-link,.home-footer button,.theatre-modes,.reading-flow,.water-scenes>summary,.camera-panel button{background:var(--glass);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow);backdrop-filter:blur(18px) saturate(1.45);-webkit-backdrop-filter:blur(18px) saturate(1.45);color:#fff9ec;text-shadow:0 1px 6px #001d3280;transition:background .25s,scale .25s,box-shadow .25s}
+.site-header button{padding:9px 16px}.site-header .brand{background:transparent;border:0;box-shadow:none;backdrop-filter:none;padding:8px 0}
+.site-header nav{gap:12px}.site-header nav button{opacity:1}
+.text-back,.quiet-link{padding:10px 17px;opacity:1}
+.primary-button:hover:not(:disabled),.secondary-button:hover:not(:disabled),.home-footer button:hover{background:linear-gradient(145deg,#ffffff50,#d2f5ff18);box-shadow:inset 0 1px 2px #fffc,0 10px 30px #00172840}
+.theatre-modes button,.reading-flow button{background:transparent;box-shadow:none;color:#fff6e6;border:1px solid transparent}
+.theatre-modes button[aria-pressed=true],.reading-flow button[aria-current=page],.home-footer button[aria-pressed=true]{background:linear-gradient(140deg,#ffffff66,#e0f3fc2e);border:1px solid #fff9;box-shadow:inset 0 1px 2px #fffa,0 2px 10px #051a3930;color:#fff;text-shadow:0 1px 6px #001425}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid #fff3bf;outline-offset:4px}
+
+.catalog-screen{height:100svh;min-height:0;overflow:auto;padding:84px 0 0;background:#31495f}
+.catalog-screen::before{background-position:center;filter:blur(24px) brightness(.7);transform:scale(1.08)}
+.catalog-screen::after{display:none}
+.catalog-inner{width:100%;height:100%;max-width:none;margin:0;position:relative;display:flex;align-items:center;justify-content:center}
+.catalog-inner>.text-back{position:fixed;top:94px;left:3vw;z-index:12}
+.catalog-screen .section-heading{position:fixed;top:87px;left:50%;transform:translateX(-50%);margin:0;z-index:11;text-shadow:0 2px 15px #0e2740;pointer-events:none}
+.catalog-screen .section-heading h1{font-size:30px;letter-spacing:.2em;margin:0}
+.catalog-screen .section-heading p{display:none}
+.story-grid{display:block;position:relative;flex-shrink:0;width:min(100vw,calc((100svh - 156px)*1.777));max-width:none;height:auto;aspect-ratio:1672/941;margin:0;padding:0;background:url('./assets/concepts/catalog/03-nine-islands.png') center/100% 100% no-repeat;perspective:1700px;gap:0}
+.story-card:nth-child(n){position:absolute;left:var(--island-x);top:var(--island-y);width:12.6%;height:22.6%;margin:0;translate:-50% -91%;rotate:var(--book-tilt);transform:none;transform-origin:50% 100%;animation:atlas-hover 5s ease-in-out infinite;filter:drop-shadow(0 16px 10px #11293777);z-index:3}
+.story-card:nth-child(3n+1){animation-delay:-1s}.story-card:nth-child(3n+2){animation-delay:-3s}.story-card:nth-child(3n){animation-delay:-4s}
+.story-card:nth-child(n):hover,.story-card:focus-visible{z-index:10;scale:1.12;rotate:0deg}
+.story-card .cover-object{height:100%;padding:10px 8px;justify-content:flex-end;border-left-width:7px!important;border-radius:3px 7px 7px 3px!important;box-shadow:3px 3px 0 #dcc9a6,6px 4px 0 #867554,0 20px 25px #092b3944}
+.story-card .scroll-spine{position:absolute;left:-5px;top:-4%;height:108%;width:12px;border:1px solid #ecd3a0;border-radius:7px;z-index:5;background:linear-gradient(90deg,#63482e,#baa170 25%,#f2dcac 48%,#b29768 70%,#674a2e);box-shadow:3px 0 6px #051c4566,inset 1px 0 #fff3d9;pointer-events:none}
+.scroll-spine::before,.scroll-spine::after{content:"";position:absolute;left:-3px;width:16px;height:8px;border-radius:4px;border:1px solid #e4c183;background:linear-gradient(#e8c68d,#7c5734 70%,#d5ac6e);box-shadow:0 2px 3px #001e3555}.scroll-spine::before{top:-3px}.scroll-spine::after{bottom:-3px}
+.story-card .cover-art{filter:brightness(.88)}
+.story-card .cover-actor{height:77%;width:94%;top:-4%;left:3%;filter:drop-shadow(0 4px 6px #05162560)}
+.story-card .cover-title{font-size:clamp(11px,1.15vw,20px);line-height:1.3;letter-spacing:.02em;margin:0;position:relative;text-shadow:0 1px 3px #000,0 1px 12px #000;z-index:2}
+.story-card .cover-volume,.story-card .cover-chapter,.story-card .cover-caption{display:none}
+.story-card .cover-description{display:none}
+.story-card::after{content:attr(aria-label);position:absolute;left:50%;top:105%;width:230px;padding:12px 17px;transform:translateX(-50%);font-size:13px;line-height:1.7;background:#132d45c9;backdrop-filter:blur(18px);border:1px solid #fff5;border-radius:17px;opacity:0;pointer-events:none;transition:opacity .2s;color:#fff8e5}
+.story-card:hover::after,.story-card:focus-visible::after{opacity:1}
+@keyframes atlas-hover{50%{translate:-50% calc(-91% - 7px)}}
+
+.reading-copy{background:transparent!important;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:20px 26px;color:#fff6e4}
+.reading-copy h1{color:#fff9ed;text-shadow:0 2px 12px #05243c}
+.story-narrative p{color:#fff8ee;text-shadow:0 2px 4px #001e32,0 0 20px #061e36;line-height:2.15}
+.reading-screen::after{background:linear-gradient(90deg,#041d3c9e, #081e3833 50%,transparent 72%)}
+.reading-copy .source-note{color:#e3ebed;border-top-color:#fff4;text-shadow:0 1px 5px #061c34}
+.reading-copy .secondary-button{border-color:#fff6}
+.classic-inline{position:relative;margin:0;padding:35px 30px;background:repeating-linear-gradient(90deg,#f1dec021 0 29px,#f5e4c32a 30px,#cda87748 31px,#ecdfbd18 33px),linear-gradient(120deg,#0c34473d,#b8ae7930);border:1px solid #e8cea47a;border-top:5px solid #bb9a606b;border-bottom:5px solid #bb9a606b;border-radius:18px;box-shadow:inset 0 0 35px #e5d19b14,0 20px 50px #05243722;backdrop-filter:blur(4px);color:#fff1d2;writing-mode:horizontal-tb}
+.classic-inline::before,.classic-inline::after{content:"";position:absolute;left:-9px;top:-14px;bottom:-14px;width:14px;border:1px solid #f1d69777;border-radius:10px;background:linear-gradient(90deg,#8e734866,#f8dfa48a,#86704a77);box-shadow:0 3px 10px #001c3820}
+.classic-inline::after{left:auto;right:-9px}
+.classic-inline>p,.classic-inline rt,.classic-inline #classic-quote rt{color:#f5e4bc;text-shadow:0 1px 5px #07243b}
+.classic-inline #classic-quote p{color:#fff5dc;text-shadow:0 2px 8px #07213a;line-height:3.4}
+
+.on-play{height:100svh;overflow:hidden}.on-play .site-header{height:62px;padding:0 3vw;z-index:31;pointer-events:none}.on-play .site-header button{pointer-events:auto}.on-play .site-header .brand{font-size:19px}
+.theatre-screen{height:100svh;min-height:0;overflow:hidden;padding:0;isolation:isolate}
+.theatre-screen::before{display:none}
+.theatre-world{position:absolute;inset:0;max-width:none;margin:0;aspect-ratio:auto;width:100%;height:100%;background-size:cover;background-position:center;overflow:hidden}
+.theatre-world::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(#051a3555,transparent 23%,transparent 65%,#051d3255);z-index:8}
+.theatre-heading{position:absolute;top:66px;left:3vw;right:3vw;margin:0;z-index:20;gap:15px;align-items:center}
+.theatre-heading h1{font-size:24px;text-shadow:0 2px 10px #00213c;letter-spacing:.07em;outline:none}
+.theatre-modes{margin:0}.theatre-modes button{font-size:13px}
+.puppet-theatre-frame{inset:0;width:100%;height:100%;z-index:2;overflow:visible}
+.puppet-theatre-frame #play-stage{position:absolute;inset:0;height:100%;width:100%;mask-image:none;overflow:hidden;contain:layout paint;background:transparent;border:0;box-shadow:none;isolation:isolate}
+#play-stage .scene-background{inset:auto;left:var(--opening-x);top:var(--opening-y);width:var(--opening-w);height:var(--opening-h);object-fit:cover;mask-image:linear-gradient(90deg,transparent,#000 1% 99%,transparent);z-index:-4}
+#play-stage .scene-effects{left:var(--opening-x);top:var(--opening-y);width:var(--opening-w);height:var(--opening-h);z-index:-3}
+#play-stage .scene-shade{display:none}
+#play-stage .scene-actor{width:25%;height:45%;bottom:9%;transform-origin:50% 100%;filter:drop-shadow(0 10px 9px #05213844);animation:actor-float 5s ease-in-out infinite}
+#play-stage .scene-actor.is-extra{width:17%;height:31%;opacity:1}
+#play-stage .scene-actor.is-prop{width:13%;height:17%;z-index:7}
+#play-stage .scene-actor[data-hand]::after{display:none}
+#play-stage .scene-actor canvas{-webkit-box-reflect:below -5px linear-gradient(transparent 45%,#fff3);object-fit:contain}
+.puppet-body{position:relative;width:100%;height:100%;transform-origin:50% 65%}.puppet-body>canvas{display:block;width:100%;height:100%;object-fit:contain}
+.scene-actor.mounted-prop{position:absolute!important;bottom:auto!important;transform:translate(-50%,-50%)!important;animation:none!important;pointer-events:none!important;z-index:8!important;filter:drop-shadow(0 2px 2px #041b3540)!important;transition:none!important}
+.mounted-prop canvas{-webkit-box-reflect:unset!important}.scene-actor.mounted-prop::after{display:none!important}
+.puppet-body>.hand-occlusion{position:absolute;z-index:9;pointer-events:none;-webkit-box-reflect:unset!important;object-fit:fill}
+#play-stage .scene-water{bottom:0;height:27%;opacity:.3}
+#play-stage .scene-mist{inset:64% -20% 0;opacity:.8}
+#play-stage[data-motion=storm] .scene-background,#play-stage[data-motion=rain] .scene-background{filter:brightness(.96) saturate(1.12)}
+.stage-curtains{z-index:4;pointer-events:none}
+.theatre-world.is-awaiting .scene-props{opacity:0}.theatre-world.is-awaiting .scene-actors{opacity:0}
+#theatre-water{z-index:6}
+.theatre-desk{display:contents}
+.theatre-screen .scene-controls{position:absolute;left:3vw;bottom:24px;z-index:20;display:flex;gap:10px;margin:0;padding:0;min-height:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none;max-width:60vw;flex-wrap:wrap}
+.scene-controls .stage-guidance{position:fixed;left:50%;top:122px;transform:translateX(-50%);width:min(600px,74vw);text-align:center;font-size:15px;line-height:1.7;text-shadow:0 2px 6px #00142b,0 0 14px #00152d;max-width:none;padding:0;background:transparent;color:#fff5dd}
+.scene-controls .control-status,.scene-controls .act-dots{display:none}
+.scene-controls .primary-button,.scene-controls .secondary-button{font-size:13px;padding:12px 19px}
+.hand-guide{position:absolute;z-index:18;bottom:92px;right:3vw;width:min(470px,38vw);padding:22px 24px;background:linear-gradient(145deg,#071c30bd,#0a3245a3);border:1px solid #ffffff35;border-radius:25px;box-shadow:inset 0 1px 1px #ffffff40,0 18px 55px #0014254f;backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);text-shadow:0 2px 6px #00182e;color:#fff;pointer-events:none;display:block}
+.hand-guide .cue-action{margin:0;padding:0 0 17px;border-bottom:1px solid #ffffff28}.hand-guide .cue-action span,.hand-guide .cue-effect span{display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:#78f1df;margin:0 0 8px;text-shadow:0 0 16px #41dec38c}.hand-guide .cue-action strong{display:block;font-size:clamp(22px,1.65vw,28px);font-weight:650;line-height:1.45;color:#fff5c9;letter-spacing:.01em;text-wrap:balance}
+.hand-guide .cue-effect{font-size:clamp(17px,1.15vw,20px);line-height:1.65;color:#fff;margin:17px 0 0;text-wrap:pretty}.hand-guide .cue-effect span{color:#b8ebe5;text-shadow:none;margin-bottom:6px}
+.hand-guide .cue-paired{display:grid;gap:16px}.hand-guide .cue-paired strong{font-size:clamp(20px,1.4vw,24px)}.hand-guide .cue-hand-left span{color:#ffe2a0}.hand-guide .cue-hand-right span{color:#91fff0}
+.gesture-hold-track{height:4px;background:#ffffff20;border-radius:4px;overflow:hidden;margin-top:10px}.gesture-hold-track i{display:block;width:0;height:100%;background:#baf6ea;transition:width .07s linear}
+.hand-guide .gesture-ack{font-size:14px;min-height:22px;margin:10px 0 0;color:#9ff4e7;font-weight:600}
+.hand-guide.cue-updated{animation:cue-attention .7s cubic-bezier(.2,.8,.2,1)}
+@keyframes cue-attention{0%{opacity:.25;translate:14px 0;box-shadow:0 0 0 2px #78f1df00,0 18px 55px #0014254f}45%{opacity:1;translate:0 0;box-shadow:0 0 0 2px #78f1df8c,0 0 42px #61e9d55c,0 18px 55px #0014254f}100%{box-shadow:inset 0 1px 1px #ffffff40,0 18px 55px #0014254f}}
+.water-scenes{position:absolute;bottom:24px;left:310px;z-index:24;margin:0;padding:0;border:0;border-radius:0;background:none;backdrop-filter:none}
+.water-scenes>summary{list-style:none;padding:12px 18px;font-size:13px;cursor:pointer;display:block;white-space:nowrap}.water-scenes>summary::-webkit-details-marker{display:none}
+#water-scene-options{position:absolute;left:-245px;bottom:58px;width:min(760px,90vw);display:grid;grid-template-columns:repeat(5,1fr);gap:10px;background:#113145c9;border:1px solid #fff5;border-radius:22px;padding:16px;backdrop-filter:blur(24px);box-shadow:0 20px 70px #0004}
+.water-scene-choice{background:var(--glass);border-color:#fff5;border-radius:12px}.water-scene-choice span{padding:0 8px;font-size:12px}
+.camera-panel{position:absolute;left:3vw;top:165px;bottom:auto;width:190px;z-index:19;background:#102d4120;backdrop-filter:blur(12px);border:1px solid #fff4;box-shadow:var(--glass-shadow);color:#fff;text-shadow:0 1px 6px #03182d}
+.camera-preview{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:#09223933}.camera-preview video{width:100%;height:100%;object-fit:fill;display:block}.camera-preview canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform:none}
+.camera-panel button{padding:6px 9px;text-decoration:none;font-size:11px;margin:3px 1px}.camera-panel span{font-size:12px}
+.morph-glow{position:absolute;width:21%;height:38%;transform:translate(-50%,50%);border-radius:50%;background:radial-gradient(ellipse,#fff3b9ce,#8aeee861 30%,transparent 70%);pointer-events:none;z-index:10;mix-blend-mode:screen}
+#play-stage .scene-actor[data-asset-id=A102]{filter:drop-shadow(0 10px 10px #14385333)}
+@media(max-width:900px){.catalog-inner{min-width:760px;justify-content:center}.catalog-screen{overflow:auto}.story-grid{width:100%;min-width:760px;max-width:none;flex-basis:100%}.catalog-screen .section-heading{top:91px}.story-card .cover-title{font-size:15px}.theatre-heading{top:62px;flex-wrap:wrap;gap:10px}.theatre-heading h1{font-size:20px}.theatre-modes{margin-left:auto;width:auto}.theatre-modes button{padding:9px 10px;font-size:11px}.scene-controls .stage-guidance{top:121px;font-size:13px}.hand-guide{width:44vw;bottom:95px;padding:18px 20px}.hand-guide .cue-action strong{font-size:21px}.hand-guide .cue-effect{font-size:16px}.camera-panel{width:144px;top:170px}#play-stage .scene-actor{width:35%;height:40%}.water-scenes{left:270px}.reading-copy{padding:15px 10px}}
+@media(max-width:600px){.on-play .site-header{height:56px}.on-play .site-header nav button{font-size:11px;padding:7px 10px}.theatre-heading{top:58px}.theatre-heading>.text-back{font-size:11px;padding:8px 12px}.theatre-heading h1{font-size:19px}.theatre-modes{order:3;justify-content:center;width:100%}.scene-controls .stage-guidance{top:155px;font-size:12px;width:86vw}.hand-guide{bottom:82px;right:4vw;width:58vw;padding:14px 15px;border-radius:18px}.hand-guide .cue-action{padding-bottom:10px}.hand-guide .cue-action span,.hand-guide .cue-effect span{font-size:10px;margin-bottom:4px}.hand-guide .cue-action strong{font-size:18px}.hand-guide .cue-effect{font-size:14px;margin-top:10px}.hand-guide .gesture-ack{font-size:11px;margin-top:6px}.camera-panel{top:192px;left:3vw;width:116px;padding:5px}.camera-panel span{font-size:10px}.camera-panel button{padding:4px 6px;font-size:10px}#play-stage .scene-actor{height:39%;width:51%}#play-stage .scene-actor.is-extra{width:29%;height:27%}#play-stage .scene-actor.is-prop{width:20%;height:12%}.theatre-screen .scene-controls{left:3vw;bottom:21px;gap:7px;max-width:64vw}.scene-controls .primary-button,.scene-controls .secondary-button{font-size:11px;padding:10px 13px;min-height:39px}.water-scenes{left:auto;right:3vw;bottom:21px}.water-scenes>summary{font-size:11px;padding:11px 12px}#water-scene-options{left:auto;right:0;bottom:52px;width:92vw;grid-template-columns:repeat(3,1fr)}.water-scene-choice{min-width:0}.reading-copy{background:transparent!important;margin-top:40svh;padding:20px 8px}.reading-screen::after{background:linear-gradient(0deg,#07234099,transparent 90%)}.classic-inline{padding:25px 19px}.catalog-inner>.text-back{top:90px;font-size:11px}.catalog-screen .section-heading h1{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.story-card:nth-child(n),.hand-guide.cue-updated{animation:none}.primary-button,.secondary-button{transition:none}}
+@media(max-width:900px){.catalog-inner,.story-grid{min-width:0}.story-grid{flex-basis:100%;width:100%}.story-card .cover-title{font-size:clamp(12px,2.05vw,15px)}}

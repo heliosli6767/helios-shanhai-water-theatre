@@ -1,0 +1,12 @@
+MediaPipe Tasks Vision 0.10.21
+https://www.npmjs.com/package/@mediapipe/tasks-vision/v/0.10.21
+Runtime files downloaded from https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/
+Upstream: https://github.com/google-ai-edge/mediapipe
+License: Apache-2.0; see LICENSE.
+
+Official Hand Landmarker float16 model, version 1
+https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+Integration reference:
+https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker/web_js
+
+Runtime, WASM and model are served locally. No camera frames are uploaded.

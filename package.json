@@ -1,0 +1,22 @@
+{
+  "name": "shanhai-water-theatre",
+  "version": "0.1.0",
+  "private": true,
+  "description": "山海水戏：独立客户端与共享内容 API 的迁移起点",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev:api": "node services/backend/server.cjs",
+    "build:miniprogram-stories": "node scripts/build-miniprogram-story-packages.cjs",
+    "build:miniprogram-diagnostic": "node scripts/build-miniprogram-diagnostic.cjs",
+    "sync:miniprogram": "node scripts/sync-miniprogram-contract.cjs",
+    "test:migration": "node --test tests/migration.test.cjs",
+    "test:web": "node scripts/test-experience.cjs && node scripts/test-performance.cjs && node scripts/test-prop-rig.cjs",
+    "test:visionkit": "node --test tests/visionkit.test.cjs",
+    "test": "npm run test:migration && npm run test:web && npm run test:visionkit"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4"
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#13282c"><title>山海水戏</title>
+<link rel="stylesheet" href="./experience.css?v=11">
+<link rel="stylesheet" href="./immersive.css?v=12">
+<link rel="stylesheet" href="./mythic.css?v=18">
+</head><body><div class="app-shell on-home">
+<header class="site-header"><button class="brand" id="brand-home" aria-label="首页">山海水戏</button><nav aria-label="导航"><button id="nav-stories">主目录</button><button id="sound-toggle" aria-pressed="false"><span class="sound-label">音乐</span></button></nav></header>
+<main>
+<section id="home-screen" class="screen home-screen" aria-labelledby="home-title">
+<div class="home-image" aria-hidden="true"></div><canvas id="home-water" class="home-water" aria-hidden="true"></canvas><div class="home-vignette" aria-hidden="true"></div>
+<div class="home-content"><h1 id="home-title">一池水，<br>万卷奇闻。</h1><p>中国《山海经》，越南水傀儡。<br>让古老的神话，在水上相遇。</p><button id="begin-button" class="primary-button">启幕 <span aria-hidden="true">↗</span></button></div><div class="home-footer"><button id="water-motion-toggle" aria-pressed="false">水波流动</button></div>
+</section>
+<section id="catalog-screen" class="screen catalog-screen" aria-labelledby="catalog-title" hidden><div class="catalog-inner"><button class="text-back" data-back="home">← 首页</button><header class="section-heading"><h1 id="catalog-title">山海奇闻</h1><p>古书与竹卷，悬于山海之间。</p></header><div id="story-grid" class="story-grid" aria-label="故事列表"></div></div></section>
+<section id="story-screen" class="screen reading-screen" aria-labelledby="story-title" hidden>
+<div class="reading-shell"><div class="reading-topline"><button class="text-back" data-back="catalog">← 主目录</button><nav class="reading-flow" aria-label="故事阅读方式"><button data-reading="story" aria-current="page">白话故事</button><button data-reading="classic">原文竹卷</button><button data-reading="stage">水上戏台</button></nav></div>
+<div class="reading-layout"><article class="reading-copy"><h1 id="story-title"></h1><div id="story-narrative" class="story-narrative"></div><div id="classic-inline" class="classic-inline" hidden><p id="classic-source"></p><div id="classic-quote" lang="zh-CN"></div></div><details class="source-note"><summary>改编说明</summary><p id="source-note"></p><a id="source-link" target="_blank" rel="noopener">查阅原典 ↗</a></details><button id="listen-story" class="secondary-button" aria-pressed="false">听故事</button></article><div class="story-visual-wrap"><div id="story-stage" class="scene-stage" aria-label="故事插画"></div></div></div></div>
+</section>
+<section id="play-screen" class="screen theatre-screen" aria-labelledby="play-title" hidden>
+<div class="theatre-heading"><button class="text-back" data-back="story">← 故事</button><h1 id="play-title"></h1><div class="theatre-modes" role="group" aria-label="操控方式"><button data-play-mode="gesture" aria-pressed="true">手势模式</button><button data-play-mode="button" aria-pressed="false">按钮模式</button><button data-play-mode="auto" aria-pressed="false">演绎动画</button></div></div>
+<div class="theatre-world">
+<div class="puppet-theatre-frame"><div id="play-stage" class="scene-stage wide-stage" aria-label="互动水戏舞台"></div></div>
+<canvas id="theatre-water" aria-hidden="true"></canvas>
+<div class="stage-curtains" aria-hidden="true"><i></i><i></i></div>
+</div>
+<div class="theatre-desk">
+<div id="play-stage-controls" class="scene-controls"></div>
+<aside id="hand-guide" class="hand-guide" aria-label="角色操作说明"></aside>
+</div>
+<div class="camera-panel" hidden><div class="camera-preview"><video id="hand-camera" autoplay muted playsinline aria-label="镜像摄像头预览"></video><canvas id="hand-landmarks" aria-label="手部关节与骨架连线"></canvas></div><span id="camera-status" role="status">摄像头未启动</span><button id="swap-hands">左右校准</button><button id="stop-camera">关闭摄像头</button></div>
+<details class="water-scenes"><summary>水幕场景</summary><div id="water-scene-options" role="group" aria-label="水幕场景"></div></details>
+</section>
+</main><div id="app-status" class="toast" role="status" aria-live="polite"></div></div>
+<script src="./stories.js?v=11"></script><script src="./scene-data.js?v=18"></script><script src="./performance-data.js?v=17"></script><script src="./asset-map.js?v=14"></script><script src="./prop-rig.js?v=18"></script><script src="./stage-renderer.js?v=18"></script><script src="./hand-input.js?v=17"></script><script src="./theatre.js?v=18"></script><script src="./app.js?v=18"></script><script src="./water-surface.js?v=11"></script>
+</body></html>

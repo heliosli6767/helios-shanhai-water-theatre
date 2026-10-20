@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/index"
+  ],
+  "subPackages": [
+    {
+      "root": "story-packages/story-01",
+      "name": "story-01",
+      "pages": [
+        "pages/reader/index",
+        "pages/reader-landscape/index",
+        "pages/stage/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "山海水戏",
+    "navigationBarBackgroundColor": "#102d3c",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#102d3c",
+    "backgroundTextStyle": "light"
+  },
+  "networkTimeout": {
+    "request": 8000
+  },
+  "permission": {
+    "scope.camera": {
+      "desc": "用于在水上戏台中识别手势并操控角色"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

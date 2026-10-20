@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-07T13:46:30.882Z",
+  "total": 125,
+  "ready": 125,
+  "blends": 4,
+  "stories": {
+    "全局参考": 2,
+    "首页_山海水戏": 4,
+    "精卫填海": 12,
+    "夸父逐日": 11,
+    "黄帝大战蚩尤": 18,
+    "羿战凿齿": 14,
+    "夏后启取九歌": 16,
+    "羲和浴日": 11,
+    "常羲浴月": 10,
+    "青丘九尾狐": 11,
+    "鸾凤百兽之舞": 16
+  },
+  "kinds": {
+    "reference": 1,
+    "background": 29,
+    "effect": 28,
+    "character": 37,
+    "prop": 30
+  },
+  "missing": [],
+  "duplicates": [],
+  "blenderVerification": {
+    "files": 4,
+    "packedImagesPerFile": 1,
+    "waterVerticesPerFile": 8686,
+    "waveShapeKeysPerFile": 5,
+    "loopSeconds": 5,
+    "frame1EqualsFrame121": true
+  },
+  "webVerification": {
+    "homeRendered": true,
+    "waterPauseTogglePassed": true,
+    "homeConsoleErrors": 0,
+    "gallery125Items": true
+  },
+  "revisionNotes": "五张背景补足水池前景；十二月与九尾狐数量特征已修订。PNG 为立体风格静图，不等于完整可操控模型。"
+}

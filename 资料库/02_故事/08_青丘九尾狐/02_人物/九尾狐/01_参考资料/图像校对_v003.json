@@ -1,0 +1,8 @@
+{
+  "id": "A102",
+  "prompt": "Use case: precise-object-edit. Keep every existing part of this fox image unchanged. The input has EIGHT visible tail tips: center top, two upper-left, three lower-left, and two upper-right. Add ONLY ONE additional fluffy white lavender tail, originating at the same rump BEHIND the body, extending horizontally toward the RIGHT EDGE at mid-body height and curling upward to a clearly visible ninth tip in the empty right-side backdrop near (1080,760). The new ninth tip must be distinctly separated from the head, ears and chest fur by a visible gap of grey background. Do NOT replace or merge or remove any of the existing eight tail tips. Keep the face, four paws, proportions, background, lighting, existing tail fan and 3D render unchanged. Exactly nine visible tails after this one addition. No text.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-9b0fc285-2c07-4725-a85d-a61d0bb6606c.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/08_青丘九尾狐/02_人物/九尾狐/02_图片/九尾狐_校对_v003.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

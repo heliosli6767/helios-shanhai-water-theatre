@@ -1,0 +1,8 @@
+{
+  "id": "A050",
+  "prompt": "Use case: precise-object-edit. Input is edit target. Preserve all distant scenery, architecture, mountains, original sunlight and cinematic Chinese 3D-animation rendering. Change ONLY bottom 40% foreground into a broad continuous reflective water puppet performance pool, with clearly visible reflections of the scenery and circular ripples. Remove central foreground mud, grass clumps or rocks that obstruct the water performance area; move such accents to far left/right banks. Maintain original story identity 羿战凿齿 / 第三幕_战后原野. Water is a Vietnamese puppet theatre staging device, not disaster flooding. No characters or typography. Keep same wide landscape composition.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-ddf65b02-f425-4599-ae8c-4b979f585a64.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/04_羿战凿齿/01_背景/第三幕_战后原野/02_图片/第三幕_战后原野_水戏前景_v002.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

@@ -1,0 +1,8 @@
+{
+  "id": "A090",
+  "prompt": "Use case: precise-object-edit. Edit target is the supplied moon-pool scene. Preserve the scenery, camera, water theatre foreground, reflections, moon textures, lanterns, mountain silhouettes and cinematic 3D style exactly. The current arc has 13 moons; make it EXACTLY TWELVE separated moons for Changxi's twelve lunar children: remove only the tiny leftmost moon at the beginning of the arc (near x=245,y=260 of a 1672x941 canvas), seamlessly replacing that orb with adjacent blue sky and wispy clouds. Keep all other twelve moon orbs unchanged. Do not add any moons anywhere, no text or labels.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-e27327a3-3afb-4b4f-9baf-d3405c26efbe.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/07_常羲浴月/01_背景/第二幕_十二月夜空/02_图片/第二幕_十二月夜空_校对_v002.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

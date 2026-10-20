@@ -1,0 +1,8 @@
+{
+  "id": "A102",
+  "prompt": "Use case: precise-object-edit. Input is edit target. Keep the same Qingqiu white fox face, four-legged full body anatomy, cinnabar forehead marking, white lavender fur, studio backdrop and cinematic 3D animated-film rendering. Redesign ONLY the tails: show EXACTLY NINE distinct fluffy tails emerging from the rump, fanned cleanly behind the fox with nine separately countable tips and visible gaps between adjacent tips. Four tails arc toward the left side, one rises at the top center, four arc toward the right side behind the body, with differing lengths so tips are all visible. None cropped, none hidden behind another tail, no tenth tail. Keep fox face and full paws unobstructed. Single character, no diagrams, numbers or labels.",
+  "source": "/Users/HeliosL/.codex/generated_images/01a11650-e476-7330-bbff-df4e5f7a9a6e/exec-93490ea0-f3a5-40bf-9867-ff1b6c078860.png",
+  "image": "/Users/HeliosL/Documents/ChatGPT/Helios 山海经/资料库/02_故事/08_青丘九尾狐/02_人物/九尾狐/02_图片/九尾狐_校对_v002.png",
+  "method": "built-in imagegen edit",
+  "preservedOriginal": true
+}

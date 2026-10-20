@@ -1,0 +1,29 @@
+{
+  "pages": ["pages/home/index"],
+  "subPackages": [
+    { "root": "story-packages/story-01", "name": "story-01", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-02", "name": "story-02", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-03", "name": "story-03", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-07", "name": "story-07", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-08", "name": "story-08", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-09", "name": "story-09", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-10", "name": "story-10", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-16", "name": "story-16", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] },
+    { "root": "story-packages/story-20", "name": "story-20", "pages": ["pages/reader/index", "pages/reader-landscape/index", "pages/stage/index"] }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "山海水戏",
+    "navigationBarBackgroundColor": "#102d3c",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#102d3c",
+    "backgroundTextStyle": "light"
+  },
+  "networkTimeout": { "request": 8000 },
+  "permission": {
+    "scope.camera": {
+      "desc": "用于在水上戏台中识别手势并操控角色"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

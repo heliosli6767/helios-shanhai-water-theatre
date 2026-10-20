@@ -1,0 +1,49 @@
+<view class="reader-page">
+  <scroll-view class="reader-pan" scroll-x="true" enhanced="{{true}}" show-scrollbar="{{false}}">
+    <view class="reader-world">
+      <image class="reader-background" src="{{sceneImage}}" mode="scaleToFill" />
+      <view class="reader-shade"></view>
+      <image wx:if="{{story}}" class="reader-character" src="{{readerCharacter}}" mode="aspectFit" />
+      <image wx:if="{{story}}" class="reader-prop" src="{{readerProp}}" mode="aspectFit" />
+
+      <view class="reader-topbar">
+        <view class="reader-leading">
+          <button class="glass-button back-button" bindtap="backCatalog">← 主目录</button>
+          <button class="glass-button orientation-button" bindtap="toggleOrientation">{{forcedLandscape ? '竖屏观看 ↻' : '横屏观看 ↻'}}</button>
+        </view>
+        <view class="reader-tabs">
+          <button class="reader-tab stage-tab" bindtap="enterStage">山海水戏</button>
+          <button class="reader-tab {{readingMode === 'story' ? 'active' : ''}}" data-mode="story" bindtap="setReading">白话故事</button>
+          <button class="reader-tab {{readingMode === 'classic' ? 'active' : ''}}" data-mode="classic" bindtap="setReading">原文竹卷</button>
+        </view>
+      </view>
+
+      <scroll-view class="copy-scroll" scroll-y="true" enhanced="{{true}}" show-scrollbar="{{false}}">
+        <view class="copy-panel {{readingMode === 'classic' ? 'bamboo-panel' : ''}}">
+          <view wx:if="{{loading}}" class="reader-state">正在展开故事…</view>
+          <view wx:elif="{{error}}" class="reader-state">
+            <view>{{error}}</view>
+            <button class="glass-button retry" bindtap="retry">重试</button>
+          </view>
+          <block wx:elif="{{story}}">
+            <view class="chapter">《山海经 · {{story.chapter}}》</view>
+            <view class="story-title">{{story.title}}</view>
+            <view wx:if="{{readingMode === 'story'}}" class="narrative">
+              <view class="paragraph" wx:for="{{story.narrative}}" wx:key="*this">{{item}}</view>
+            </view>
+            <view wx:else class="classic-copy">
+              <view class="classic-source">原文节选 · 拼音注读</view>
+              <view class="classic-line" wx:for="{{story.classicLines}}" wx:for-item="line" wx:key="key">
+                <view class="classic-token {{token.pinyin ? '' : 'punctuation'}}" wx:for="{{line.tokens}}" wx:for-item="token" wx:key="key">
+                  <text wx:if="{{token.pinyin}}" class="pinyin">{{token.pinyin}}</text>
+                  <text class="han">{{token.han}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+
+    </view>
+  </scroll-view>
+</view>

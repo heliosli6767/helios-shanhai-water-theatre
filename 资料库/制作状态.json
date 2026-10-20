@@ -1,0 +1,2012 @@
+{
+  "version": 1,
+  "method": "内置 imagegen 生成3D风格图片；blender 非空才表示存在可编辑工程。",
+  "assets": [
+    {
+      "id": "A001",
+      "name": "八仙电影风格",
+      "story": "全局参考",
+      "storyId": null,
+      "type": "reference",
+      "category": "01_风格参考",
+      "folder": "00_全局参考/01_风格参考/八仙电影风格",
+      "status": "reference",
+      "image": "00_全局参考/01_风格参考/八仙电影风格/01_参考资料/八仙风格_用户提供.jpg",
+      "blender": null
+    },
+    {
+      "id": "A002",
+      "name": "旧版水墨山水",
+      "story": "全局参考",
+      "storyId": null,
+      "type": "background",
+      "category": "02_通用背景",
+      "folder": "00_全局参考/02_通用背景/旧版水墨山水",
+      "status": "legacy",
+      "image": "00_全局参考/02_通用背景/旧版水墨山水/02_图片/水墨山水_旧版_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A003",
+      "name": "山海群像水上剧场",
+      "story": "首页_山海水戏",
+      "storyId": null,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "01_首页_山海水戏/01_背景/山海群像水上剧场",
+      "status": "generated",
+      "image": "01_首页_山海水戏/01_背景/山海群像水上剧场/02_图片/山海群像_3D风格概念_v001.png",
+      "blender": "01_首页_山海水戏/01_背景/山海群像水上剧场/03_Blender/首页_山海群像_可编辑水面_v001.blend",
+      "source": "exec-4f661d8a-9f80-4df8-8096-6036d16f1146.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A004",
+      "name": "动态水面与倒影",
+      "story": "首页_山海水戏",
+      "storyId": null,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "01_首页_山海水戏/04_特效/动态水面与倒影",
+      "status": "generated",
+      "image": "01_首页_山海水戏/04_特效/动态水面与倒影/02_图片/动态水面与倒影_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1774,
+        887
+      ]
+    },
+    {
+      "id": "A005",
+      "name": "水雾",
+      "story": "首页_山海水戏",
+      "storyId": null,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "01_首页_山海水戏/04_特效/水雾",
+      "status": "generated",
+      "image": "01_首页_山海水戏/04_特效/水雾/02_图片/水雾_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A006",
+      "name": "灯笼光晕",
+      "story": "首页_山海水戏",
+      "storyId": null,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "01_首页_山海水戏/04_特效/灯笼光晕",
+      "status": "generated",
+      "image": "01_首页_山海水戏/04_特效/灯笼光晕/02_图片/灯笼光晕_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A007",
+      "name": "第一幕_发鸠山与山林",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/01_精卫填海/01_背景/第一幕_发鸠山与山林",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/01_背景/第一幕_发鸠山与山林/02_图片/发鸠山_3D风格概念_v001.png",
+      "blender": "02_故事/01_精卫填海/01_背景/第一幕_发鸠山与山林/03_Blender/精卫01_发鸠山_可编辑水面_v001.blend",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A008",
+      "name": "第二幕_明亮暴风东海",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/01_精卫填海/01_背景/第二幕_明亮暴风东海",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/01_背景/第二幕_明亮暴风东海/02_图片/明亮暴风东海_3D风格概念_v001.png",
+      "blender": "02_故事/01_精卫填海/01_背景/第二幕_明亮暴风东海/03_Blender/精卫02_明亮暴风东海_可编辑水面_v001.blend",
+      "source": "exec-e0eba3c0-112a-48ae-8797-cea1d2959baa.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A009",
+      "name": "第三幕_海上礁石与渐生陆地",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/01_精卫填海/01_背景/第三幕_海上礁石与渐生陆地",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/01_背景/第三幕_海上礁石与渐生陆地/02_图片/海礁新陆_3D风格概念_v001.png",
+      "blender": "02_故事/01_精卫填海/01_背景/第三幕_海上礁石与渐生陆地/03_Blender/精卫03_海礁新陆_可编辑水面_v001.blend",
+      "source": "exec-2e906716-69ee-400a-bd53-edc5af0637e4.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A010",
+      "name": "女娃",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/01_精卫填海/02_人物/女娃",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/02_人物/女娃/02_图片/女娃_3D风格角色_v001.png",
+      "blender": null,
+      "source": "exec-2cdb0ef9-e2ae-468b-823c-c4d7be9bf852.png",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A011",
+      "name": "精卫鸟",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/01_精卫填海/02_人物/精卫鸟",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/02_人物/精卫鸟/02_图片/精卫鸟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1163,
+        1352
+      ]
+    },
+    {
+      "id": "A012",
+      "name": "东海水灵",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/01_精卫填海/02_人物/东海水灵",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/02_人物/东海水灵/02_图片/东海水灵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A013",
+      "name": "彩色石子",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/01_精卫填海/03_道具/彩色石子",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/03_道具/彩色石子/02_图片/彩色石子_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1312,
+        1199
+      ]
+    },
+    {
+      "id": "A014",
+      "name": "枯枝",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/01_精卫填海/03_道具/枯枝",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/03_道具/枯枝/02_图片/枯枝_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A015",
+      "name": "浪花",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/01_精卫填海/04_特效/浪花",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/04_特效/浪花/02_图片/浪花_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "A016",
+      "name": "乌云",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/01_精卫填海/04_特效/乌云",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/04_特效/乌云/02_图片/乌云_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A017",
+      "name": "旋风",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/01_精卫填海/04_特效/旋风",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/04_特效/旋风/02_图片/旋风_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A018",
+      "name": "水面涟漪",
+      "story": "精卫填海",
+      "storyId": 1,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/01_精卫填海/04_特效/水面涟漪",
+      "status": "generated",
+      "image": "02_故事/01_精卫填海/04_特效/水面涟漪/02_图片/水面涟漪_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A019",
+      "name": "第一幕_夕阳部落田野",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/02_夸父逐日/01_背景/第一幕_夕阳部落田野",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/01_背景/第一幕_夕阳部落田野/02_图片/第一幕_夕阳部落田野_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A020",
+      "name": "第二幕_山脉与河渭",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/02_夸父逐日/01_背景/第二幕_山脉与河渭",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/01_背景/第二幕_山脉与河渭/02_图片/第二幕_山脉与河渭_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A021",
+      "name": "第三幕_荒原与桃林",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/02_夸父逐日/01_背景/第三幕_荒原与桃林",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/01_背景/第三幕_荒原与桃林/02_图片/第三幕_荒原与桃林_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A022",
+      "name": "夸父",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/02_夸父逐日/02_人物/夸父",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/02_人物/夸父/02_图片/夸父_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A023",
+      "name": "太阳神灵",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/02_夸父逐日/02_人物/太阳神灵",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/02_人物/太阳神灵/02_图片/太阳神灵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A024",
+      "name": "河灵",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/02_夸父逐日/02_人物/河灵",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/02_人物/河灵/02_图片/河灵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A025",
+      "name": "巨型木杖",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/02_夸父逐日/03_道具/巨型木杖",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/03_道具/巨型木杖/02_图片/巨型木杖_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A026",
+      "name": "桃树幼苗",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/02_夸父逐日/03_道具/桃树幼苗",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/03_道具/桃树幼苗/02_图片/桃树幼苗_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A027",
+      "name": "太阳火光",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/02_夸父逐日/04_特效/太阳火光",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/04_特效/太阳火光/02_图片/太阳火光_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A028",
+      "name": "饮水水流",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/02_夸父逐日/04_特效/饮水水流",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/04_特效/饮水水流/02_图片/饮水水流_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A029",
+      "name": "桃林生长",
+      "story": "夸父逐日",
+      "storyId": 2,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/02_夸父逐日/04_特效/桃林生长",
+      "status": "generated",
+      "image": "02_故事/02_夸父逐日/04_特效/桃林生长/02_图片/桃林生长_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A030",
+      "name": "第一幕_冀州古战场",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/03_黄帝大战蚩尤/01_背景/第一幕_冀州古战场",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/01_背景/第一幕_冀州古战场/02_图片/第一幕_冀州古战场_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A031",
+      "name": "第二幕_风雨水阵",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/03_黄帝大战蚩尤/01_背景/第二幕_风雨水阵",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/01_背景/第二幕_风雨水阵/02_图片/第二幕_风雨水阵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A032",
+      "name": "第三幕_雨止后的战场",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/03_黄帝大战蚩尤/01_背景/第三幕_雨止后的战场",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/01_背景/第三幕_雨止后的战场/02_图片/第三幕_雨止后的战场_水戏前景_v002.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "waterStage": "foreground_pool_reflections_ripples"
+    },
+    {
+      "id": "A033",
+      "name": "黄帝",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/黄帝",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/黄帝/02_图片/黄帝_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A034",
+      "name": "蚩尤",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/蚩尤",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/蚩尤/02_图片/蚩尤_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A035",
+      "name": "应龙",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/应龙",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/应龙/02_图片/应龙_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A036",
+      "name": "女魃",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/女魃",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/女魃/02_图片/女魃_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A037",
+      "name": "风伯",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/风伯",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/风伯/02_图片/风伯_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A038",
+      "name": "雨师",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/雨师",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/雨师/02_图片/雨师_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A039",
+      "name": "黄帝军士兵",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/黄帝军士兵",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/黄帝军士兵/02_图片/黄帝军士兵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A040",
+      "name": "蚩尤军士兵",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/03_黄帝大战蚩尤/02_人物/蚩尤军士兵",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/02_人物/蚩尤军士兵/02_图片/蚩尤军士兵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A041",
+      "name": "黄帝战旗",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/03_黄帝大战蚩尤/03_道具/黄帝战旗",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/03_道具/黄帝战旗/02_图片/黄帝战旗_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A042",
+      "name": "蚩尤兵器",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/03_黄帝大战蚩尤/03_道具/蚩尤兵器",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/03_道具/蚩尤兵器/02_图片/蚩尤兵器_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A043",
+      "name": "战鼓",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/03_黄帝大战蚩尤/03_道具/战鼓",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/03_道具/战鼓/02_图片/战鼓_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "A044",
+      "name": "云层",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/03_黄帝大战蚩尤/04_特效/云层",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/04_特效/云层/02_图片/云层_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A045",
+      "name": "水阵",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/03_黄帝大战蚩尤/04_特效/水阵",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/04_特效/水阵/02_图片/水阵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A046",
+      "name": "雷电",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/03_黄帝大战蚩尤/04_特效/雷电",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/04_特效/雷电/02_图片/雷电_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A047",
+      "name": "龙卷风",
+      "story": "黄帝大战蚩尤",
+      "storyId": 3,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/03_黄帝大战蚩尤/04_特效/龙卷风",
+      "status": "generated",
+      "image": "02_故事/03_黄帝大战蚩尤/04_特效/龙卷风/02_图片/龙卷风_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A048",
+      "name": "第一幕_寿华高草原野",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/04_羿战凿齿/01_背景/第一幕_寿华高草原野",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/01_背景/第一幕_寿华高草原野/02_图片/第一幕_寿华高草原野_水戏前景_v002.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "waterStage": "foreground_pool_reflections_ripples"
+    },
+    {
+      "id": "A049",
+      "name": "第二幕_狂风对峙场",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/04_羿战凿齿/01_背景/第二幕_狂风对峙场",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/01_背景/第二幕_狂风对峙场/02_图片/第二幕_狂风对峙场_水戏前景_v002.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "waterStage": "foreground_pool_reflections_ripples"
+    },
+    {
+      "id": "A050",
+      "name": "第三幕_战后原野",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/04_羿战凿齿/01_背景/第三幕_战后原野",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/01_背景/第三幕_战后原野/02_图片/第三幕_战后原野_水戏前景_v002.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "waterStage": "foreground_pool_reflections_ripples"
+    },
+    {
+      "id": "A051",
+      "name": "羿",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/04_羿战凿齿/02_人物/羿",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/02_人物/羿/02_图片/羿_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A052",
+      "name": "凿齿",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/04_羿战凿齿/02_人物/凿齿",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/02_人物/凿齿/02_图片/凿齿_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A053",
+      "name": "受惊飞鸟",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/04_羿战凿齿/02_人物/受惊飞鸟",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/02_人物/受惊飞鸟/02_图片/受惊飞鸟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A054",
+      "name": "彤弓",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/彤弓",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/彤弓/02_图片/彤弓_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A055",
+      "name": "神箭",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/神箭",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/神箭/02_图片/神箭_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A056",
+      "name": "箭囊",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/箭囊",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/箭囊/02_图片/箭囊_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A057",
+      "name": "巨盾",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/巨盾",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/巨盾/02_图片/巨盾_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "A058",
+      "name": "长戈",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/长戈",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/长戈/02_图片/长戈_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A059",
+      "name": "高草",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/04_羿战凿齿/03_道具/高草",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/03_道具/高草/02_图片/高草_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "A060",
+      "name": "箭迹",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/04_羿战凿齿/04_特效/箭迹",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/04_特效/箭迹/02_图片/箭迹_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A061",
+      "name": "风吹草动",
+      "story": "羿战凿齿",
+      "storyId": 7,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/04_羿战凿齿/04_特效/风吹草动",
+      "status": "generated",
+      "image": "02_故事/04_羿战凿齿/04_特效/风吹草动/02_图片/风吹草动_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A062",
+      "name": "第一幕_人间祭台",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/05_夏后启取九歌/01_背景/第一幕_人间祭台",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/01_背景/第一幕_人间祭台/02_图片/第一幕_人间祭台_水戏前景_v002.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "waterStage": "foreground_pool_reflections_ripples"
+    },
+    {
+      "id": "A063",
+      "name": "第二幕_云海天门",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/05_夏后启取九歌/01_背景/第二幕_云海天门",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/01_背景/第二幕_云海天门/02_图片/第二幕_云海天门_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A064",
+      "name": "第三幕_水上乐舞盛典",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/05_夏后启取九歌/01_背景/第三幕_水上乐舞盛典",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/01_背景/第三幕_水上乐舞盛典/02_图片/第三幕_水上乐舞盛典_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A065",
+      "name": "夏后启",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/05_夏后启取九歌/02_人物/夏后启",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/02_人物/夏后启/02_图片/夏后启_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A066",
+      "name": "青龙",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/05_夏后启取九歌/02_人物/青龙",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/02_人物/青龙/02_图片/青龙_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A067",
+      "name": "赤龙",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/05_夏后启取九歌/02_人物/赤龙",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/02_人物/赤龙/02_图片/赤龙_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "id": "A068",
+      "name": "乐师",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/05_夏后启取九歌/02_人物/乐师",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/02_人物/乐师/02_图片/乐师_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A069",
+      "name": "舞者",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/05_夏后启取九歌/02_人物/舞者",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/02_人物/舞者/02_图片/舞者_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A070",
+      "name": "龙缰",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/龙缰",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/龙缰/02_图片/龙缰_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A071",
+      "name": "天门",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/天门",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/天门/02_图片/天门_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "A072",
+      "name": "编钟",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/编钟",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/编钟/02_图片/编钟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "id": "A073",
+      "name": "鼓",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/鼓",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/鼓/02_图片/鼓_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A074",
+      "name": "古琴",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/古琴",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/古琴/02_图片/古琴_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A075",
+      "name": "笛子",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/05_夏后启取九歌/03_道具/笛子",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/03_道具/笛子/02_图片/笛子_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A076",
+      "name": "发光音符",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/05_夏后启取九歌/04_特效/发光音符",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/04_特效/发光音符/02_图片/发光音符_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A077",
+      "name": "云纹",
+      "story": "夏后启取九歌",
+      "storyId": 8,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/05_夏后启取九歌/04_特效/云纹",
+      "status": "generated",
+      "image": "02_故事/05_夏后启取九歌/04_特效/云纹/02_图片/云纹_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A078",
+      "name": "第一幕_夜色甘渊",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/06_羲和浴日/01_背景/第一幕_夜色甘渊",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/01_背景/第一幕_夜色甘渊/02_图片/第一幕_夜色甘渊_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A079",
+      "name": "第二幕_十日映照水池",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/06_羲和浴日/01_背景/第二幕_十日映照水池",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/01_背景/第二幕_十日映照水池/02_图片/第二幕_十日映照水池_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A080",
+      "name": "第三幕_扶桑日出",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/06_羲和浴日/01_背景/第三幕_扶桑日出",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/01_背景/第三幕_扶桑日出/02_图片/第三幕_扶桑日出_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A081",
+      "name": "羲和",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/06_羲和浴日/02_人物/羲和",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/02_人物/羲和/02_图片/羲和_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A082",
+      "name": "金乌",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/06_羲和浴日/02_人物/金乌",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/02_人物/金乌/02_图片/金乌_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A083",
+      "name": "太阳灵体",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/06_羲和浴日/02_人物/太阳灵体",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/02_人物/太阳灵体/02_图片/太阳灵体_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A084",
+      "name": "扶桑神树",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/06_羲和浴日/03_道具/扶桑神树",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/03_道具/扶桑神树/02_图片/扶桑神树_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1161,
+        1355
+      ]
+    },
+    {
+      "id": "A085",
+      "name": "金色水盆",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/06_羲和浴日/03_道具/金色水盆",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/03_道具/金色水盆/02_图片/金色水盆_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A086",
+      "name": "金色水波",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/06_羲和浴日/04_特效/金色水波",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/04_特效/金色水波/02_图片/金色水波_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A087",
+      "name": "日轮轨道",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/06_羲和浴日/04_特效/日轮轨道",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/04_特效/日轮轨道/02_图片/日轮轨道_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A088",
+      "name": "晨雾",
+      "story": "羲和浴日",
+      "storyId": 9,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/06_羲和浴日/04_特效/晨雾",
+      "status": "generated",
+      "image": "02_故事/06_羲和浴日/04_特效/晨雾/02_图片/晨雾_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A089",
+      "name": "第一幕_深蓝月池",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/07_常羲浴月/01_背景/第一幕_深蓝月池",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/01_背景/第一幕_深蓝月池/02_图片/第一幕_深蓝月池_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A090",
+      "name": "第二幕_十二月夜空",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/07_常羲浴月/01_背景/第二幕_十二月夜空",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/01_背景/第二幕_十二月夜空/02_图片/第二幕_十二月夜空_校对_v003.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A091",
+      "name": "第三幕_月光山路与人家",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/07_常羲浴月/01_背景/第三幕_月光山路与人家",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/01_背景/第三幕_月光山路与人家/02_图片/第三幕_月光山路与人家_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A092",
+      "name": "常羲",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/07_常羲浴月/02_人物/常羲",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/02_人物/常羲/02_图片/常羲_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A093",
+      "name": "月灵",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/07_常羲浴月/02_人物/月灵",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/02_人物/月灵/02_图片/月灵_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A094",
+      "name": "星使鸟",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/07_常羲浴月/02_人物/星使鸟",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/02_人物/星使鸟/02_图片/星使鸟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A095",
+      "name": "银色月球",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/07_常羲浴月/03_道具/银色月球",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/03_道具/银色月球/02_图片/银色月球_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A096",
+      "name": "月相圆环",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/07_常羲浴月/03_道具/月相圆环",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/03_道具/月相圆环/02_图片/月相圆环_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A097",
+      "name": "星光粒子",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/07_常羲浴月/04_特效/星光粒子",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/04_特效/星光粒子/02_图片/星光粒子_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A098",
+      "name": "银色水纹",
+      "story": "常羲浴月",
+      "storyId": 10,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/07_常羲浴月/04_特效/银色水纹",
+      "status": "generated",
+      "image": "02_故事/07_常羲浴月/04_特效/银色水纹/02_图片/银色水纹_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A099",
+      "name": "第一幕_青丘奇花异草",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/08_青丘九尾狐/01_背景/第一幕_青丘奇花异草",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/01_背景/第一幕_青丘奇花异草/02_图片/第一幕_青丘奇花异草_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A100",
+      "name": "第二幕_九岔迷雾山路",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/08_青丘九尾狐/01_背景/第二幕_九岔迷雾山路",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/01_背景/第二幕_九岔迷雾山路/02_图片/第二幕_九岔迷雾山路_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A101",
+      "name": "第三幕_雾散山口与高台",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/08_青丘九尾狐/01_背景/第三幕_雾散山口与高台",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/01_背景/第三幕_雾散山口与高台/02_图片/第三幕_雾散山口与高台_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A102",
+      "name": "九尾狐",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/08_青丘九尾狐/02_人物/九尾狐",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/02_人物/九尾狐/02_图片/九尾狐_校对_v003.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A103",
+      "name": "旅人",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/08_青丘九尾狐/02_人物/旅人",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/02_人物/旅人/02_图片/旅人_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A104",
+      "name": "灌灌鸟",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/08_青丘九尾狐/02_人物/灌灌鸟",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/02_人物/灌灌鸟/02_图片/灌灌鸟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "A105",
+      "name": "鸟羽护符",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/08_青丘九尾狐/03_道具/鸟羽护符",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/03_道具/鸟羽护符/02_图片/鸟羽护符_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A106",
+      "name": "镜像石门",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/08_青丘九尾狐/03_道具/镜像石门",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/03_道具/镜像石门/02_图片/镜像石门_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A107",
+      "name": "九尾幻影",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/08_青丘九尾狐/04_特效/九尾幻影",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/04_特效/九尾幻影/02_图片/九尾幻影_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A108",
+      "name": "迷雾",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/08_青丘九尾狐/04_特效/迷雾",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/04_特效/迷雾/02_图片/迷雾_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A109",
+      "name": "狐火",
+      "story": "青丘九尾狐",
+      "storyId": 16,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/08_青丘九尾狐/04_特效/狐火",
+      "status": "generated",
+      "image": "02_故事/08_青丘九尾狐/04_特效/狐火/02_图片/狐火_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A110",
+      "name": "第一幕_晨雾原野",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/09_鸾凤百兽之舞/01_背景/第一幕_晨雾原野",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/01_背景/第一幕_晨雾原野/02_图片/第一幕_晨雾原野_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A111",
+      "name": "第二幕_水边彩羽舞台",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/09_鸾凤百兽之舞/01_背景/第二幕_水边彩羽舞台",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/01_背景/第二幕_水边彩羽舞台/02_图片/第二幕_水边彩羽舞台_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A112",
+      "name": "第三幕_黄昏山林",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "background",
+      "category": "01_背景",
+      "folder": "02_故事/09_鸾凤百兽之舞/01_背景/第三幕_黄昏山林",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/01_背景/第三幕_黄昏山林/02_图片/第三幕_黄昏山林_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "A113",
+      "name": "鸾鸟",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/鸾鸟",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/鸾鸟/02_图片/鸾鸟_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A114",
+      "name": "凤凰",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/凤凰",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/凤凰/02_图片/凤凰_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A115",
+      "name": "鹿",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/鹿",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/鹿/02_图片/鹿_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A116",
+      "name": "熊",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/熊",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/熊/02_图片/熊_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A117",
+      "name": "白鹤",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/白鹤",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/白鹤/02_图片/白鹤_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A118",
+      "name": "灵兔",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "character",
+      "category": "02_人物",
+      "folder": "02_故事/09_鸾凤百兽之舞/02_人物/灵兔",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/02_人物/灵兔/02_图片/灵兔_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A119",
+      "name": "羽扇",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/09_鸾凤百兽之舞/03_道具/羽扇",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/03_道具/羽扇/02_图片/羽扇_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A120",
+      "name": "彩羽",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/09_鸾凤百兽之舞/03_道具/彩羽",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/03_道具/彩羽/02_图片/彩羽_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A121",
+      "name": "鼓",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/09_鸾凤百兽之舞/03_道具/鼓",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/03_道具/鼓/02_图片/鼓_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "id": "A122",
+      "name": "悬铃",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/09_鸾凤百兽之舞/03_道具/悬铃",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/03_道具/悬铃/02_图片/悬铃_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1044,
+        1507
+      ]
+    },
+    {
+      "id": "A123",
+      "name": "花瓣",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "prop",
+      "category": "03_道具",
+      "folder": "02_故事/09_鸾凤百兽之舞/03_道具/花瓣",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/03_道具/花瓣/02_图片/花瓣_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "A124",
+      "name": "水面倒影",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/09_鸾凤百兽之舞/04_特效/水面倒影",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/04_特效/水面倒影/02_图片/水面倒影_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "A125",
+      "name": "发光音符",
+      "story": "鸾凤百兽之舞",
+      "storyId": 20,
+      "type": "effect",
+      "category": "04_特效",
+      "folder": "02_故事/09_鸾凤百兽之舞/04_特效/发光音符",
+      "status": "generated",
+      "image": "02_故事/09_鸾凤百兽之舞/04_特效/发光音符/02_图片/发光音符_3D视觉_v001.png",
+      "blender": null,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "updated": "2026-10-07T13:46:30.396Z"
+}

@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><base href="../"><title>人物道具完整性检查</title>
+<style>body{margin:20px;background:#102737;color:#fff;font:14px system-ui}header{position:sticky;top:0;background:#102737f0;padding:10px;z-index:2}select{font:inherit;padding:8px}main{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}article{background:#274152;padding:10px;border-radius:12px}h3{margin:0 0 8px;font-size:14px}.pair{display:flex;height:215px;background:repeating-conic-gradient(#447783 0% 25%,#182b36 0% 50%) 50%/24px 24px}.pair img,.pair canvas{width:50%;height:100%;object-fit:contain}.stats{font-size:11px;line-height:1.6;color:#cee3e8}article[hidden]{display:none}</style>
+<header><h1>人物 / 道具：左原图，右网页实际显示</h1><select id="filter"><option value="all">全部</option><option value="1">精卫填海</option><option value="2">夸父追日</option><option value="3">黄帝大战蚩尤</option><option value="7">羿战凿齿</option><option value="8">夏后启取九歌</option><option value="9">羲和浴日</option><option value="10">常羲浴月</option><option value="16">青丘九尾狐</option><option value="20">鸾鸟百兽</option></select><span id="status">正在检查</span></header><main id="grid"></main>
+<style>main{grid-template-columns:repeat(3,1fr)}.pair{height:220px}</style>
+<script src="asset-map.js?v=17"></script><script src="stage-renderer.js?v=17"></script><script>
+(async()=>{const entries=Object.values(SHANHAI_ASSETS).filter(a=>['character','prop'].includes(a.type));let errors=0;
+for(const a of entries){const article=document.createElement('article');article.dataset.story=a.storyId;article.id=a.id;
+article.innerHTML='<h3>'+a.id+' '+a.name+'</h3><div class="pair"><img alt="原图 '+a.name+'"><canvas aria-label="渲染 '+a.name+'"></canvas></div><p class="stats"></p>';grid.append(article);article.querySelector('img').src=a.src;const c=article.querySelector('canvas');await StageArt.sprite(a.id,c);
+if(c.dataset.ready==='error')errors++;const pixels=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let solid=0,partial=0;for(let i=3;i<pixels.length;i+=4){if(pixels[i]===255)solid++;else if(pixels[i]>0)partial++;}article.querySelector('.stats').textContent='不透明 '+Math.round(solid/(pixels.length/4)*100)+'% · 半透明 '+Math.round(partial/(pixels.length/4)*100)+'%';}
+document.getElementById('status').textContent=entries.length+' 个资产 · 加载失败 '+errors;
+filter.onchange=()=>document.querySelectorAll('article').forEach(a=>a.hidden=filter.value!=='all'&&a.dataset.story!==filter.value);
+})();</script></html>

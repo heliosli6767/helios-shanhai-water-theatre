@@ -1,0 +1,171 @@
+<view class="page {{waterMotion ? 'motion-on' : ''}}">
+  <view wx:if="{{screen === 'home'}}" class="screen home-screen">
+    <scroll-view class="home-pan" scroll-x="true" enhanced="true" show-scrollbar="false" scroll-left="{{homeScrollLeft}}" scroll-with-animation="true">
+      <view id="home-origin" class="home-panorama">
+        <image class="home-pan-image" src="/assets/images/home-hero.jpg" mode="scaleToFill" />
+        <view class="pan-water-surface" aria-hidden="true">
+          <view class="pan-wave pan-wave-a"></view>
+          <view class="pan-wave pan-wave-b"></view>
+          <view class="pan-wave pan-wave-c"></view>
+        </view>
+        <view class="pan-waterfall waterfall-a" aria-hidden="true"></view>
+        <view class="pan-waterfall waterfall-b" aria-hidden="true"></view>
+        <view class="pan-waterfall waterfall-c" aria-hidden="true"></view>
+        <view class="pan-mist" aria-hidden="true"></view>
+      </view>
+    </scroll-view>
+    <view class="home-shade"></view>
+
+    <view class="topbar">
+      <view class="home-leading">
+        <view class="brand">山海水戏</view>
+        <view class="glass-pill music-control">音乐</view>
+      </view>
+    </view>
+
+    <view class="home-copy">
+      <view class="hero-title">一池水，</view>
+      <view class="hero-title hero-title-second">万卷奇闻。</view>
+      <view class="hero-intro">中国《山海经》，越南水傀儡。</view>
+      <view class="hero-intro">让古老的神话，在水上相遇。</view>
+      <button class="glass-button begin-button {{loading || error ? 'is-disabled' : ''}}" bindtap="openCatalog" disabled="{{loading || !!error}}">
+        <text>启幕</text><text class="arrow">↗</text>
+      </button>
+    </view>
+
+    <view wx:if="{{loading}}" class="api-state">正在读取山海故事…</view>
+    <view wx:elif="{{error}}" class="api-state api-error">
+      <text>{{error}}</text>
+      <button class="retry-button" bindtap="retry">重试</button>
+    </view>
+
+    <view class="home-footer">
+      <button class="glass-pill build-info-button" bindtap="showBuildInfo">手势校准版 · 版本信息</button>
+      <button class="glass-pill water-toggle" bindtap="toggleWater">
+        {{waterMotion ? '水波已启' : '水波流动'}}
+      </button>
+    </view>
+    <view class="home-pan-hint">← 左右轻扫，浏览山海群像 →</view>
+  </view>
+
+  <view wx:elif="{{screen === 'catalog'}}" class="screen catalog-screen">
+    <image class="screen-image catalog-blur" src="/assets/images/nine-islands.jpg" mode="aspectFill" />
+    <view class="catalog-shade"></view>
+
+    <view class="catalog-topbar">
+      <button class="glass-pill back-button" bindtap="backHome">← 首页</button>
+      <view class="catalog-heading">
+        <view class="catalog-title">山海奇闻</view>
+        <view class="catalog-subtitle">古书与竹卷，悬于山海之间。</view>
+      </view>
+      <view class="topbar-spacer"></view>
+    </view>
+
+    <scroll-view class="atlas-scroll" scroll-x="true" enhanced="true" show-scrollbar="false">
+      <view class="island-atlas">
+        <image class="atlas-image" src="/assets/images/nine-islands.jpg" mode="scaleToFill" />
+        <button
+          class="story-book book-{{index % 3}}"
+          wx:for="{{stories}}"
+          wx:key="id"
+          style="{{item.islandStyle}}"
+          data-id="{{item.id}}"
+          bindtap="chooseStory"
+          aria-label="{{item.title}}"
+        >
+          <image class="book-art" src="{{item.cover}}" mode="aspectFill" />
+          <view class="book-shade"></view>
+          <view class="scroll-spine"><view class="spine-cap spine-cap-top"></view><view class="spine-cap spine-cap-bottom"></view></view>
+          <view class="book-title">{{item.title}}</view>
+        </button>
+      </view>
+    </scroll-view>
+
+    <view class="catalog-hint">左右轻扫，在九座山海岛屿间择一卷奇闻</view>
+  </view>
+
+  <view wx:elif="{{screen === 'story'}}" class="screen story-screen">
+    <view class="reading-topbar">
+      <button class="glass-pill reading-back" bindtap="backCatalog">← 主目录</button>
+      <view class="reading-tabs">
+        <button class="reading-tab {{readingMode === 'stage' ? 'is-active' : ''}}" data-mode="stage" bindtap="setReading">山海水戏</button>
+        <button class="reading-tab {{readingMode === 'story' ? 'is-active' : ''}}" data-mode="story" bindtap="setReading">白话故事</button>
+        <button class="reading-tab {{readingMode === 'classic' ? 'is-active' : ''}}" data-mode="classic" bindtap="setReading">原文竹卷</button>
+      </view>
+    </view>
+
+    <view wx:if="{{readingMode === 'stage'}}" class="mini-theatre">
+      <image wx:if="{{currentScene}}" class="theatre-scene-image" src="{{currentScene.backgroundImage}}" mode="aspectFill" />
+      <view class="theatre-scene-shade"></view>
+      <view class="theatre-arch" aria-hidden="true"><view class="arch-top"></view><view class="arch-side arch-left"></view><view class="arch-side arch-right"></view></view>
+      <view class="theatre-water" aria-hidden="true"><view class="theatre-ripple ripple-a"></view><view class="theatre-ripple ripple-b"></view><view class="theatre-ripple ripple-c"></view></view>
+      <view class="theatre-scene-title" wx:if="{{currentScene}}">第{{currentScene.number}}幕 · {{currentScene.title}}</view>
+
+      <view class="stage-act-tabs" wx:if="{{story}}">
+        <button class="stage-act-button {{stageAct === index ? 'is-active' : ''}}" wx:for="{{story.scenes}}" wx:key="number" data-index="{{index}}" bindtap="setStageAct">{{index + 1}}</button>
+      </view>
+
+      <view class="stage-guide" wx:if="{{currentScene}}">
+        <view class="stage-guide-kicker">MediaPipe Hands</view>
+        <view class="stage-guide-action">{{currentScene.firstStep.label}}</view>
+        <view class="stage-guide-result">{{currentScene.firstStep.instruction}} {{currentScene.firstStep.result}}</view>
+        <button class="camera-button" bindtap="toggleCamera">{{cameraOn ? '关闭摄像头' : '开启摄像头'}}</button>
+        <view wx:if="{{cameraError}}" class="camera-error">{{cameraError}}</view>
+      </view>
+
+      <view wx:if="{{cameraOn}}" class="camera-shell">
+        <camera class="hand-camera" device-position="front" flash="off" binderror="cameraError"></camera>
+        <view class="camera-crosshair" aria-hidden="true"><view class="camera-point camera-point-a"></view><view class="camera-point camera-point-b"></view><view class="camera-point camera-point-c"></view><view class="camera-point camera-point-d"></view></view>
+        <view class="camera-label">手势预览</view>
+      </view>
+    </view>
+
+    <scroll-view wx:else class="story-pan-scroll" scroll-x="true" enhanced="{{true}}" show-scrollbar="{{false}}" scroll-left="0">
+      <view class="story-panorama">
+        <image wx:if="{{story && story.scenes[0]}}" class="story-pan-image" src="{{story.scenes[0].backgroundImage}}" mode="scaleToFill" />
+        <image wx:else class="story-pan-image" src="{{selectedSummary.cover}}" mode="scaleToFill" />
+        <view class="story-pan-shade"></view>
+        <view class="story-scene-water" aria-hidden="true"></view>
+        <view class="story-visual-caption" wx:if="{{story && story.scenes[0]}}">
+          <view>第一幕 · {{story.scenes[0].title}}</view>
+          <text class="visual-caption-sub">完整舞台画面</text>
+        </view>
+
+        <scroll-view class="reading-scroll" scroll-y="true" enhanced="{{true}}" show-scrollbar="{{false}}">
+          <view class="reading-card {{readingMode === 'classic' ? 'classic-card' : ''}}">
+            <view class="reading-chapter">《山海经 · {{selectedSummary.chapter}}》</view>
+            <view class="reading-title">{{selectedSummary.title}}</view>
+
+            <view wx:if="{{storyLoading}}" class="reading-state">正在展开这卷故事…</view>
+            <view wx:elif="{{storyError}}" class="reading-state">
+              <view>{{storyError}}</view>
+              <button class="retry-button story-retry" bindtap="retryStory">重试</button>
+            </view>
+
+            <block wx:elif="{{story}}">
+              <view wx:if="{{readingMode === 'story'}}" class="narrative">
+                <view class="narrative-paragraph" wx:for="{{story.narrative}}" wx:key="*this">{{item}}</view>
+                <view class="adaptation-note">
+                  <view class="note-label">改编说明</view>
+                  <view>{{story.source.note}}</view>
+                </view>
+              </view>
+
+              <view wx:else class="classic-scroll">
+                <view class="classic-source">原文节选 · 拼音注读</view>
+                <view class="classic-line" wx:for="{{story.classicLines}}" wx:for-item="line" wx:key="key">
+                  <view class="classic-token {{token.pinyin ? 'with-pinyin' : 'punctuation'}}" wx:for="{{line.tokens}}" wx:for-item="token" wx:key="key">
+                    <text wx:if="{{token.pinyin}}" class="token-pinyin">{{token.pinyin}}</text>
+                    <text class="token-han">{{token.han}}</text>
+                  </view>
+                </view>
+                <view class="classic-footnote">原文依据：{{story.chapter}}</view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+        <view class="story-pan-hint">← 左右轻扫，阅读故事或查看完整画面 →</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
