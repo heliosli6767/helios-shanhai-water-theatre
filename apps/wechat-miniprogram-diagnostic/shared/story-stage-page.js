@@ -3,10 +3,8 @@
 const storyService = require('../services/story');
 const performance = require('./performance-data');
 const stageLayouts = require('./stage-layout-data');
-const WechatHandInference = require('./wechat-hand-inference');
 const MiniWater = require('./mini-water');
 const BUILD = require('./build-info');
-const { failure } = require('./vision-diagnostics');
 
 const THEMES = [
   { name: '漆木飞檐', image: '/assets/images/stages/stage-1.jpg', openingStyle: 'left:18%;top:24%;width:64%;height:46%' },
@@ -112,8 +110,8 @@ module.exports = function createStagePage(storyId, packageRoot) {
       currentScene: null,
       currentCue: null,
       sceneImage: `${packageRoot}/assets/act-1.jpg`,
-      guideRows: [{ label: '', text: '请先开启摄像头' }],
-      resultText: '允许摄像头后，跟随故事完成手势。',
+      guideRows: [{ label: '', text: '无手势上传测试' }],
+      resultText: '摄像头与 VisionKit 已关闭。',
       cameraOn: false,
       cameraReady: false,
       cameraError: '',
@@ -121,7 +119,7 @@ module.exports = function createStagePage(storyId, packageRoot) {
       cameraErrorHelp: '',
       cameraErrorSettings: '',
       buildId: BUILD.id,
-      inferenceStatus: '未开启',
+      inferenceStatus: '测试分支已关闭手势识别',
       hands: [],
       completed: false,
       isLandscape: false,
@@ -268,19 +266,15 @@ module.exports = function createStagePage(storyId, packageRoot) {
     backReader: function() { wx.navigateBack(); },
     previewStage: function() { this.setData({ previewOverride: true }); },
     toggleCamera: function() {
-      if (this.data.cameraOn && !this.data.cameraError) {
-        this.stopInference();
-        this.setData({ cameraOn: false, cameraReady: false, hands: [], inferenceStatus: '已关闭' });
-        return;
-      }
-      const self = this;
       this.stopInference();
-      this.setData({ cameraOn: true, cameraReady: false, cameraError: '', cameraErrorCode: '', cameraErrorHelp: '', cameraErrorSettings: '', inferenceStatus: '等待摄像头权限…' }, function() {
-        self.startInference();
-      });
+      this.setData({ cameraOn: false, cameraReady: false, hands: [], inferenceStatus: '测试分支已关闭手势识别' });
+      wx.showToast({ title: '测试版已关闭手势', icon: 'none' });
     },
 
     startInference: function() {
+      this.setData({ cameraOn: false, cameraReady: false, hands: [], inferenceStatus: '测试分支已关闭手势识别' });
+      return;
+      /* istanbul ignore next -- retained below only for branch-to-branch comparison
       if (!this.data.cameraOn || this._inference || this._startingInference || this._devtoolsCameraPreview) return;
       const self = this;
       this._startingInference = true;
@@ -373,6 +367,7 @@ module.exports = function createStagePage(storyId, packageRoot) {
           }
         });
       } catch (error) { fail(failure('permission', error, '摄像头准备失败')); }
+      */
     },
 
     openSettings: function() {

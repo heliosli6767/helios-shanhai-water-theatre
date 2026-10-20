@@ -103,8 +103,8 @@ Page({
   retry: function() { this.loadHome(); },
   showBuildInfo: function() {
     wx.showModal({
-      title: '手势校准版',
-      content: '当前小程序版本：' + BUILD.id + '\n打开《精卫填海》→ 山海水戏 → 开启摄像头。\n摄像头与骨架已改为同一画布绘制。',
+      title: '无手势上传测试',
+      content: '当前小程序版本：' + BUILD.id + '\n本分支不请求摄像头权限，不创建 VisionKit 会话。\n仅用于比较素材上传和真机连接时间。',
       showCancel: false,
       confirmText: '知道了'
     });

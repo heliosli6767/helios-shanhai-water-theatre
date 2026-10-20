@@ -1,7 +1,7 @@
 <view class="rotate-gate" wx:if="{{!previewOverride}}">
   <view class="rotate-device">↻</view>
   <view class="rotate-title">请横置手机</view>
-  <view class="rotate-copy">水上戏台与手势识别仅在横屏中开启</view>
+  <view class="rotate-copy">无手势上传测试仅在横屏中展示</view>
   <button class="glass-button rotate-preview" bindtap="previewStage">继续预览舞台</button>
 </view>
 
@@ -26,37 +26,16 @@
   <view class="stage-topbar">
     <view class="stage-leading">
       <button class="glass-button back-button" bindtap="backReader">← 阅读</button>
-      <button class="glass-button camera-toggle" bindtap="toggleCamera">{{cameraError ? '重试摄像头' : cameraOn ? '关闭摄像头' : '开启摄像头'}}</button>
-      <button class="glass-button" bindtap="showBuildInfo">检测信息</button>
+      <view class="glass-button static-test-label">无手势上传测试</view>
     </view>
     <view class="scene-title" wx:if="{{currentScene}}">{{story.title}} · 第{{actIndex + 1}}幕 · {{currentScene.title}}</view>
     <text class="build-label">{{buildId}}</text>
   </view>
 
-  <view wx:if="{{cameraOn}}" class="camera-shell">
-    <canvas type="webgl" id="visionCanvas" class="hand-camera"></canvas>
-    <view class="camera-status">{{inferenceStatus}}</view>
-  </view>
-
   <view class="gesture-guide {{completed ? 'is-complete' : ''}}" wx:if="{{currentScene}}">
-    <view class="guide-label first-label">请操作</view>
-    <view class="guide-row" wx:for="{{guideRows}}" wx:key="label">
-      <view wx:if="{{item.label}}" class="guide-hand">{{item.label}}</view>
-      <view class="guide-action">{{item.text}}</view>
-    </view>
-    <view class="guide-label result-label">你会看到</view>
-    <view class="guide-result">{{resultText}}</view>
-  </view>
-
-  <view wx:if="{{cameraError}}" class="camera-failure">
-    <view class="failure-title">{{cameraError}}</view>
-    <view class="failure-code">{{cameraErrorCode}} · {{buildId}}</view>
-    <view class="failure-help">{{cameraErrorHelp}}</view>
-    <view class="failure-actions">
-      <button class="glass-button" bindtap="copyCameraDiagnostic">复制诊断</button>
-      <button wx:if="{{cameraErrorSettings}}" class="glass-button" bindtap="openSettings">权限设置</button>
-      <button class="glass-button" bindtap="toggleCamera">重试</button>
-    </view>
+    <view class="guide-label first-label">对照测试</view>
+    <view class="guide-action">本版不启动摄像头与 VisionKit</view>
+    <view class="guide-result">只验证图片素材、舞台与真机调试传输速度。</view>
   </view>
 
   <view class="theme-picker">

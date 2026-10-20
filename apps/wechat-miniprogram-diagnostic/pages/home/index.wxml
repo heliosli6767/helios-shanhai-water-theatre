@@ -40,7 +40,7 @@
     </view>
 
     <view class="home-footer">
-      <button class="glass-pill build-info-button" bindtap="showBuildInfo">手势校准版 · 版本信息</button>
+      <button class="glass-pill build-info-button" bindtap="showBuildInfo">无手势上传测试 · 版本信息</button>
       <button class="glass-pill water-toggle" bindtap="toggleWater">
         {{waterMotion ? '水波已启' : '水波流动'}}
       </button>
@@ -106,17 +106,9 @@
       </view>
 
       <view class="stage-guide" wx:if="{{currentScene}}">
-        <view class="stage-guide-kicker">MediaPipe Hands</view>
-        <view class="stage-guide-action">{{currentScene.firstStep.label}}</view>
-        <view class="stage-guide-result">{{currentScene.firstStep.instruction}} {{currentScene.firstStep.result}}</view>
-        <button class="camera-button" bindtap="toggleCamera">{{cameraOn ? '关闭摄像头' : '开启摄像头'}}</button>
-        <view wx:if="{{cameraError}}" class="camera-error">{{cameraError}}</view>
-      </view>
-
-      <view wx:if="{{cameraOn}}" class="camera-shell">
-        <camera class="hand-camera" device-position="front" flash="off" binderror="cameraError"></camera>
-        <view class="camera-crosshair" aria-hidden="true"><view class="camera-point camera-point-a"></view><view class="camera-point camera-point-b"></view><view class="camera-point camera-point-c"></view><view class="camera-point camera-point-d"></view></view>
-        <view class="camera-label">手势预览</view>
+        <view class="stage-guide-kicker">静态舞台测试</view>
+        <view class="stage-guide-action">摄像头与手势识别已关闭</view>
+        <view class="stage-guide-result">用于比较素材上传与真机连接时间。</view>
       </view>
     </view>
 

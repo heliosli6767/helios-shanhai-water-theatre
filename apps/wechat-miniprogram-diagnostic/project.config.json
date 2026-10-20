@@ -1,6 +1,6 @@
 {
-  "description": "山海水戏轻量真机诊断：仅首页与精卫填海",
-  "projectname": "shanhai-water-theatre-diagnostic",
+  "description": "山海水戏无手势上传对照测试：仅首页与精卫填海",
+  "projectname": "shanhai-water-theatre-no-gesture-test",
   "appid": "wxd82ba52342dc85af",
   "compileType": "miniprogram",
   "miniprogramRoot": "./",
@@ -11,7 +11,8 @@
     "minified": true,
     "compileWorklet": false,
     "uglifyFileName": false,
-    "uploadWithSourceMap": true,
+    "uploadWithSourceMap": false,
+    "ignoreUploadUnusedFiles": true,
     "enhance": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
@@ -32,9 +33,26 @@
       {
         "value": "README.md",
         "type": "file"
+      },
+      {
+        "value": "shared/wechat-hand-inference.js",
+        "type": "file"
+      },
+      {
+        "value": "shared/vision-diagnostics.js",
+        "type": "file"
       }
     ],
-    "include": []
+    "include": [
+      {
+        "value": "assets",
+        "type": "folder"
+      },
+      {
+        "value": "story-packages/story-01/assets",
+        "type": "folder"
+      }
+    ]
   },
   "simulatorPluginLibVersion": {},
   "editorSetting": {}
