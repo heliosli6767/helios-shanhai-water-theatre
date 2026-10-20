@@ -24,11 +24,6 @@
   "networkTimeout": {
     "request": 8000
   },
-  "permission": {
-    "scope.camera": {
-      "desc": "用于在水上戏台中识别手势并操控角色"
-    }
-  },
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

@@ -21,6 +21,7 @@ function walk(directory) {
 }
 
 test('no-gesture comparison package does not expose or import camera inference', () => {
+  const appConfig = JSON.parse(read('app.json'));
   const stageMarkup = read('story-packages/story-01/pages/stage/index.wxml');
   const homeMarkup = read('pages/home/index.wxml');
   const stageLogic = read('shared/story-stage-page.js');
@@ -28,6 +29,7 @@ test('no-gesture comparison package does not expose or import camera inference',
   assert.doesNotMatch(homeMarkup, /MediaPipe Hands|\u5f00\u542f\u6444\u50cf\u5934|<camera\b/);
   assert.doesNotMatch(stageLogic, /require\(['"]\.\/wechat-hand-inference['"]\)/);
   assert.match(stageMarkup, /\u65e0\u624b\u52bf\u4e0a\u4f20\u6d4b\u8bd5/);
+  assert.equal(appConfig.permission, undefined);
 });
 
 test('upload configuration filters unused inference files but force-includes runtime art', () => {
